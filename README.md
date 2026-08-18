@@ -45,8 +45,11 @@ Validação:
 
 ```bash
 npm run lint
+npm run check:migrations
 npm run build
 ```
+
+Configuração do banco: [`docs/SUPABASE_SETUP.md`](docs/SUPABASE_SETUP.md).
 
 ## Status
 

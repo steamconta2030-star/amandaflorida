@@ -234,12 +234,11 @@ export const updateMyJobStatus = createServerFn({ method: "POST" })
       .parse(data),
   )
   .handler(async ({ data, context }) => {
-    const { supabase, userId } = context;
-    const { error } = await supabase
-      .from("bookings")
-      .update({ status: data.status })
-      .eq("id", data.id)
-      .eq("cleaner_id", userId);
+    const { supabase } = context;
+    const { error } = await supabase.rpc("update_cleaner_booking_status", {
+      _booking_id: data.id,
+      _status: data.status,
+    });
     if (error) throw new Error(error.message);
     return { ok: true };
   });

@@ -626,6 +626,10 @@ export type Database = {
           zip: string;
         }[];
       };
+      update_cleaner_booking_status: {
+        Args: { _booking_id: string; _status: string };
+        Returns: undefined;
+      };
     };
     Enums: {
       app_role: "admin" | "cleaner";

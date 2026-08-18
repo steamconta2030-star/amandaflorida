@@ -123,12 +123,10 @@ export const cancelBooking = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((data: unknown) => z.object({ id: z.string().uuid() }).parse(data))
   .handler(async ({ data, context }) => {
-    const { supabase, userId } = context;
-    const { error } = await supabase
-      .from("bookings")
-      .update({ status: "cancelled" })
-      .eq("id", data.id)
-      .eq("user_id", userId);
+    const { supabase } = context;
+    const { error } = await supabase.rpc("cancel_booking", {
+      _booking_id: data.id,
+    });
     if (error) throw new Error(error.message);
     return { ok: true };
   });

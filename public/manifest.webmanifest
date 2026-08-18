@@ -1,0 +1,55 @@
+{
+  "id": "/?source=pwa",
+  "name": "Amanda Florida — Cleaning in Tampa",
+  "short_name": "Amanda Florida",
+  "description": "Book cleaning in Tampa by chat. Homes, Airbnbs, and moves.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait",
+  "lang": "en-US",
+  "dir": "ltr",
+  "background_color": "#FAFAF7",
+  "theme_color": "#FF6B57",
+  "categories": ["lifestyle", "productivity"],
+  "iarc_rating_id": "",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a cleaning",
+      "short_name": "Book",
+      "description": "Start a booking by chat",
+      "url": "/chat?source=pwa_shortcut",
+      "icons": [{ "src": "/icon-512.png", "sizes": "512x512" }]
+    },
+    {
+      "name": "My bookings",
+      "short_name": "Bookings",
+      "description": "See your upcoming cleanings",
+      "url": "/bookings?source=pwa_shortcut",
+      "icons": [{ "src": "/icon-512.png", "sizes": "512x512" }]
+    },
+    {
+      "name": "Browse cleaners",
+      "short_name": "Cleaners",
+      "description": "Browse verified cleaners in Tampa",
+      "url": "/cleaners?source=pwa_shortcut",
+      "icons": [{ "src": "/icon-512.png", "sizes": "512x512" }]
+    }
+  ]
+}

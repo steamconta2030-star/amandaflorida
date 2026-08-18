@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /bookings
+Disallow: /host
+Disallow: /cleaner$
+Disallow: /api/
+
+Sitemap: https://amandaflorida.com/sitemap.xml

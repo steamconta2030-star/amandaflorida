@@ -1,0 +1,1 @@
+ALTER TABLE public.conversations ADD COLUMN IF NOT EXISTS quoted_value numeric(10,2);
